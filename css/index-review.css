@@ -1,0 +1,66 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: #666;}
+body{font-size: 16px; color: #666;font-family: "font_ns", sans-serif; height: 6000px;}
+
+.header{width: 100%; height: 164px; border-top: 5px solid #009223;}
+.header::after{content: ""; position: absolute; width: 100%; height: 1px; background-color: #ddd; z-index: 2; top: 169px;}
+
+.header .header-wrap{width: 1170px; height: 100%; margin: 0 auto; display: flex;
+background-color: #fb9f9f;
+flex-wrap: wrap;
+/* 부모넓이보다 요소넓이가 더 크므로 초과되는 요소들(.nav)은 아랫줄로 배치됨. */
+position: relative;
+}
+.header .logo{
+    width: 100%;
+    /* flex-basis: 100%; */
+    text-align: center; margin-top: 35px;
+    
+}
+
+.header .etc{
+    position: absolute; right: 25px; top: 40px;
+    background-color: blue;
+}
+.header .etc ul{
+    display: flex; 
+}
+.header .etc ul li{
+    position: relative;
+}
+.header .etc ul li a{
+    /* display: block; */
+    font-size: 13px;
+}
+.header .etc ul li:nth-child(2){margin-left: 30px; margin-right: 15px;}
+
+.header .nav{
+    width: 100%;
+    /* flex-basis: 100%; */
+    display: flex;
+    padding-top: 16px; padding-bottom: 10px;
+    /* pb10 ? */
+    background-color: #a9ffa3;
+
+    /* position: relative; z-index: 9; */
+
+}
+.header .nav ul{
+    display: flex; width: 990px; margin: 0 auto; height: 69px;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .nav ul li{
+    background-color: #fff;
+    flex-basis: 165px; text-align: center; font-weight: bold; font-size: 18px; letter-spacing: -0.04em; height: 69px; line-height: 67px; cursor: pointer;
+}
+.header .nav ul li a{
+    display: inline-block;
+    width: 100%; color: #e69292;
+}
+.header .nav ul li.on a{color: #009223;}
+
+.header .submenu{width: 100%; background-color: #fff;
+    transition: 0.2s; padding-top: 40px; margin-top: -41px;}
